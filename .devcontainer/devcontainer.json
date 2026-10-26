@@ -1,0 +1,29 @@
+{
+  "name": "Angular & Node.js 24 Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24.22.1"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Angular.ng-template",
+        "vscode-icons-team.vscode-icons"
+      ],
+      "settings": {
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "workbench.iconTheme": "vscode-icons",
+        "editor.minimap.enabled": false,
+        "editor.fontSize": 13,
+        "editor.stickyScroll.enabled": false,
+        "terminal.integrated.shellIntegration.enabled": false
+      }
+    }
+  },
+  "forwardPorts": [
+    4200
+  ],
+  "postCreateCommand": "npm install -g @angular/cli"
+}
